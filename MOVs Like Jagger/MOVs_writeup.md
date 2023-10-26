@@ -4,7 +4,7 @@ The challenge comes down to a mathematical principle, elliptic curves and their 
 
 The secret location is P elliptic curve point multiplied by nQ number. We get P elliptic curve point if we produce a value error on the site (present_x and present_y). We also get Q elliptic curve point which was produced by multiplying G elliptic curve point by nQ.
 
-We get told the values of G and Q. This means the location calculation is vulnerable to MOV attack (given A and r\\*A, find r). 
+We get told the values of G and Q. This means the location calculation is vulnerable to MOV attack (given A and r*A, find r). 
 
 Used [this](https://github.com/jvdsn/crypto-attacks/blob/master/attacks/ecc/mov_attack.py) tool. Modified to match the right data for Q:
 
@@ -70,7 +70,8 @@ def attack(P, R, max_k=6, max_tries=10):
     return None
 attack(G,F)
 ```
-nQ is **10131318009579915944**. 
+nQ is **10131318009579915944**
+.
 
 From there, the calculation
 ```python
